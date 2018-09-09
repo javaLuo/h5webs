@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>美年大健康</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="dist/app.min.css">
+    <link rel="stylesheet" href="dist/swiper-4.3.5.min.css">
+
+</head>
+<body>
+<div id="share-model" class="share-model">
+    <img src="dist/assets/share.png" />
+    <ul>
+        <li>点击发送至朋友圈</li>
+        <li>给家人亲友带去爱的祝福</li>
+    </ul>
+</div>
+<div id="music" class="music playing"></div>
+<div class="boss">
+    <div class="swiper-container" id="swiper">
+        <div id="sw-back" class="sw-back" data-swiper-parallax-y="-20%" >
+            <canvas id="canvas1" class="canvas1"></canvas>
+        </div>
+        <div id="swiper-wrapper" class="swiper-wrapper">
+            <!-- a -->
+            <div id="page-a" class="swiper-slide page-a">
+                <div class="moon"></div>
+                <img class="logo" src="dist/assets/logo.png" />
+                <img class="t1" src="dist/assets/p1/t1.png" />
+                <img class="shadow" src="dist/assets/p1/shadow.png" />
+                <img class="t2" src="dist/assets/p1/t2.png" />
+                <img class="next" src="dist/assets/next.png"/>
+                <ul class="ul-box">
+                    <li>所谓父女母子一场</li>
+                    <li>究竟意味着什么</li>
+                </ul>
+            </div>
+            <!-- b -->
+            <div id="page-b" class="swiper-slide page-b">
+                <div id="d-1" class="d-1"></div>
+                <div class="d-2">
+                    <div>其实你和他的缘分</div>
+                    <div>不过是 今生今世不断</div>
+                    <div>目送他的背影</div>
+                    <div>渐行渐远</div>
+                </div>
+                <div class="d-3">
+                    <img src="dist/assets/p2/t1.png" />
+                    <img src="dist/assets/p2/t2.png" />
+                </div>
+                <div class="d-4">
+                    <div id="video-mark" class="mark">
+                        <img src="dist/assets/p2/play.png" />
+                    </div>
+                    <video id="video1" preload src="dist/assets/video.mp4" poster="dist/assets/video-img.jpg" onPause="videoPause()" />
+                </div>
+                <img class="next" src="dist/assets/next.png"/>
+            </div>
+            <!-- c -->
+            <div id="page-c" class="swiper-slide page-c">
+                <ul>
+                    <li class="li1">渐行渐远的你</li>
+                    <li class="li2">可曾留意过父母的变化</li>
+                </ul>
+                <ul>
+                    <li class="li3">你是否发现他们突然</li>
+                    <li class="li4">喜欢煮得烂烂的菜？</li>
+                </ul>
+                <ul>
+                    <li class="li5">你是否发现他们经常</li>
+                    <li class="li6">忘记关煤气或电源？</li>
+                </ul>
+                <ul>
+                    <li class="li7">你是否发现他们不再</li>
+                    <li class="li8">喜欢出门遛弯？</li>
+                </ul>
+                <ul>
+                    <li class="li9">他们的这些变化，你知道为什么吗？</li>
+                    <li class="li10">因为他们在逐渐老去</li>
+                </ul>
+                <img class="next" src="dist/assets/next.png"/>
+            </div>
+            <!-- page-d -->
+            <div id="page-d" class="swiper-slide page-d">
+                <ul class="ul1">
+                    <li>可尽管如此，他们仍然……</li>
+                    <li>懂事到 <span>—— 不想给子女添任何麻烦</span></li>
+                </ul>
+                <div class="pic-box">
+                    <img src="dist/assets/p4/t1.png"/><img src="dist/assets/p4/t2.png"/>
+                </div>
+                <ul class="ul2">
+                    <li>懂事到 <span>—— 不想让子女有任何担心</span></li>
+                    <li>“你好了，我就好了。”</li>
+                </ul>
+                <img class="next" src="dist/assets/next.png"/>
+            </div>
+            <!-- page-e -->
+            <div id="page-e" class="swiper-slide page-e">
+                <div class="back"></div>
+                <ul class="ul-box">
+                    <li>63<i>%</i>的人每年只有</li>
+                    <li>不到<span>
+                        <!--0~3-->
+                        <ul class="anime_3"></ul>
+                    </span>次的家庭聚会</li>
+                    <li class="mt">每年与父母在一起的时间</li>
+                    <li>平均为<span>
+                        <!--0~7-->
+                        <ul class="anime_7"></ul>
+                    </span><span>
+                        <!--0~78-->
+                        <ul class="anime_78"></ul>
+                    </span>小时</li>
+                    <li class="mt">空巢老人数量已超过<span class="anime1">
+                        <!--0~5-->
+                        <ul class="anime_5"></ul>
+                    </span><span>
+                        <!--0~50-->
+                        <ul class="anime_50"></ul>
+                    </span><span><i>%</i></span></li>
+                    <li class="mt"><span>
+                        <!--0~7-->
+                        <ul class="anime_7_two"></ul>
+                    </span>成以上老人因为缺少陪伴</li>
+                    <li>而缺乏幸福感</li>
+                </ul>
+                <img class="next" src="dist/assets/next.png"/>
+            </div>
+            <!-- page-f -->
+            <div id="page-f" class="swiper-slide page-f">
+                <ul class="ul-box">
+                    <li>其实，生命本身就有</li>
+                    <li>不堪一击的脆弱</li>
+                    <li>爱，根本经不起等待</li>
+                </ul>
+                <div class="moon"></div>
+                <div class="light-btn" id="light-btn1">
+                    <div>生成爱的祝福</div>
+                </div>
+                <img class="next" src="dist/assets/next.png"/>
+            </div>
+            <!-- page-g -->
+            <div id="page-g" class="swiper-slide page-g">
+                <ul class="ul-box">
+                    <li>趁岁月静好 趁父母健在</li>
+                    <li>请多给父母和家人一份关爱</li>
+                    <li>定期为他们进行健康检查</li>
+                    <li>健康管理 始于慢病预防</li>
+                </ul>
+                <div class="moon">
+                    <ul id="moon-words-box" class="moon-words-box">
+                        <li>爸爸你要好好照顾妈妈</li>
+                        <li>妈妈你要多体谅爸爸</li>
+                        <li>我会照顾好自己的</li>
+                        <li>我爱你们</li>
+                    </ul>
+                </div>
+                <div class="light-btn btn2" id="light-btn2">
+                    <div><a href="https://mall.jd.com/index-1000099062.html" target="_blank" rel="noopener noreferrer">为爱送一份健康</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="heng">
+    <span>请竖屏观看哦 ^ω^</span>
+</div>
+<div id="loading" class="loading">
+    <div class="load">
+        <img src="dist/assets/logo-img.png" />
+        <div>Loading <span class="loading-point">…</span></div>
+    </div>
+</div>
+<img id="s1" class="star-hide" src="dist/assets/star/s1.png" />
+<img id="s2" class="star-hide" src="dist/assets/star/s2.png" />
+<audio id="audio1" loop src="dist/assets/music.mp3" autoplay class="dom-hide"/>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="dist/fastclick.min.js"></script>
+<script src="dist/swiper-4.3.5.min.js"></script>
+<script src="dist/app.min.js"></script>
+</body>
+</html>
