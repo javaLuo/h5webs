@@ -14,8 +14,6 @@ var stars = []; // 所有的星星
 var s1 = document.getElementById("s1");
 var s2 = document.getElementById("s2");
 window.onload = function(){
-    FastClick.attach(document.body);
-
     swiper1 = new Swiper('#swiper',{
         direction : 'vertical', // 方向
         parallax : true, // 视差
