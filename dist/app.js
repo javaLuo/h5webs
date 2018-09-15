@@ -13,6 +13,9 @@ var swBack = document.getElementById('sw-back');
 var stars = []; // 所有的星星
 var s1 = document.getElementById('s1');
 var s2 = document.getElementById('s2');
+var s3 = document.getElementById('s3');
+var s3show = false;
+var star3 = [];
 window.onload = function() {
   swiper1 = new Swiper('#swiper', {
     direction: 'vertical', // 方向
@@ -30,7 +33,6 @@ window.onload = function() {
 function onPageChange(index) {
   $('#swiper-wrapper>.swiper-slide').removeClass('show');
   $('#share-model').removeClass('show');
-  stopAnimate2();
   switch (index) {
     case 0:
       showA();
@@ -62,7 +64,6 @@ function showB() {
   $('#page-b').addClass('show');
 }
 function showC() {
-  animate2();
   $('#page-c').addClass('show');
 }
 function showD() {
@@ -161,7 +162,7 @@ function init() {
     })
     .resize();
   initStars();
-  initCanvasAnimate(); // 初始化文字粒子
+  // initCanvasAnimate(); // 初始化文字粒子
   $('#loading').addClass('hide');
   setTimeout(function() {
     $('#loading').remove();
@@ -198,6 +199,12 @@ function initStars() {
       y: random(-20, canvas1.height + 20),
     });
   }
+
+  for(var k=0;k<12;k++){
+    star3.push({
+      
+    })
+  }
   animate();
 }
 
@@ -205,7 +212,6 @@ function initStars() {
 var hu = Math.PI / 180;
 
 function drow() {
-  // ctx.fillRect(0,0,canvas1.width,canvas1.height);
   ctx.clearRect(0, 0, canvas1.width, canvas1.height);
   for (var i = 0; i < stars.length; i++) {
     var t = stars[i];
@@ -224,6 +230,12 @@ function drow() {
       } else if (rand < 0.5 && t.opacity < 1) {
         t.opacity += 0.1;
       }
+    }
+  }
+  // 流星
+  if(s3show){
+    for(var k = 0;k<star3.length;k++){
+
     }
   }
 }
@@ -313,142 +325,4 @@ function CanvalHD(ctx) {
   } else {
     return (devicePixelRatio / backingStorePixelRatio) * 2;
   }
-}
-
-var canvas2 = document.getElementById('canvas2');
-var ctx2 = canvas2.getContext('2d');
-var ctx2p = [];
-var words2 = [
-  '渐行渐远的你',
-  '可曾留意过父母的变化',
-  '你是否发现他们突然',
-  '喜欢煮得烂烂的菜？',
-  '你是否发现他们经常',
-  '忘记关煤气或电源？',
-  '你是否发现他们不再',
-  '喜欢出门遛弯？',
-  '他们的这些变化，你知道为什么吗？',
-  '因为他们在逐渐老去',
-];
-var animate2Id = null;
-var imgdom = makeStarTexture2();
-function initCanvasAnimate() {
-  console.log(window, document.body.clientHeight);
-  canvas2.width = document.body.clientWidth;
-  canvas2.height = document.body.clientHeight * 0.8;
-
-  ctx2.fillStyle = '#cccccc';
-  ctx2.textAlign = 'center';
-  ctx2.font = '16px Serif';
-  var h = 18;
-  for (var k = 0; k < words2.length; k++) {
-    if (k > 0) {
-      if (k % 2 === 0) {
-        h = h + 18 + 34;
-      } else {
-        h = h + 18 + 12;
-      }
-    }
-    ctx2.fillText(words2[k], canvas2.width / 2, h);
-  }
-
-  var data = ctx2.getImageData(0, 0, canvas2.width, canvas2.height).data;
-  var b32 = new Uint32Array(data.buffer);
-  console.log(b32.length, canvas2.width * canvas2.height);
-  for (let i = 0; i < canvas2.height; i++) {
-    for (let j = 0; j < canvas2.width; j++) {
-      if (b32[i * canvas2.width + j] && j % 2 === 0 && i % 2 === 0) {
-        var x00 = random(-50, 50);
-        var y00 = random(-50, 50);
-        var w00 = Math.random() * 2 + 2;
-        ctx2p.push({
-          x: j, // 原始地址x
-          y: i, // 原始地址y
-          x00: x00,
-          y00: y00,
-          x0: x00, // 初始偏移值
-          y0: y00, // 初始偏移值
-          w00: w00,
-          w: w00, // 初始大小
-          opacity: 0, // 初始透明度
-          color: 'rgb(' + Math.floor(random(100, 255)) + ',' + Math.floor(random(100, 255)) + ',' + Math.floor(random(100, 255)) + ')',
-        });
-      }
-    }
-  }
-  ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-}
-
-var tip = 0;
-function drow2() {
-  ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-  for (var i = 0; i < ctx2p.length; i++) {
-    ctx2p[i].x0 = ctx2p[i].x0 > 0 ? ctx2p[i].x0 - ctx2p[i].x00 / 140 : 0;
-    ctx2p[i].y0 = ctx2p[i].y0 > 0 ? ctx2p[i].y0 - ctx2p[i].y00 / 140 : 0;
-    ctx2p[i].w = ctx2p[i].w > 0.1 ? ctx2p[i].w - ctx2p[i].w00 / 140 : 0.1;
-    if (ctx2p[i].w <= 0.1) {
-      continue;
-    }
-    if (tip > 100) {
-      ctx2p[i].opacity = ctx2p[i].opacity > 0 ? ctx2p[i].opacity - 0.01 : 0;
-    } else {
-      ctx2p[i].opacity = ctx2p[i].opacity > 0.6 ? 0.6 : ctx2p[i].opacity + 0.01;
-    }
-
-    ctx2.save();
-    // ctx2.fillStyle = ctx2p[i].color;
-    ctx2.globalAlpha = ctx2p[i].opacity;
-    ctx2.drawImage(imgdom, ctx2p[i].x + ctx2p[i].x0, ctx2p[i].y + ctx2p[i].y0, ctx2p[i].w, ctx2p[i].w);
-    ctx2.restore();
-  }
-
-  if (tip > 120) {
-    ctx2.save();
-    ctx2.fillStyle = '#f0f0f0';
-    ctx2.globalAlpha = tip / 200;
-    var h = 18;
-    for (var k = 0; k < words2.length; k++) {
-      if (k > 0) {
-        if (k % 2 === 0) {
-          h = h + 18 + 34;
-        } else {
-          h = h + 18 + 12;
-        }
-      }
-      ctx2.fillText(words2[k], canvas2.width / 2, h);
-    }
-    ctx2.restore();
-  }
-
-  tip++;
-
-  if (tip >= 200) {
-    stopAnimate2();
-  }
-}
-
-function animate2() {
-  animate2Id = requestAnimationFrame(animate2);
-  drow2();
-}
-
-function stopAnimate2() {
-  console.log('停止了', animate2Id);
-  if (animate2Id) {
-    cancelAnimationFrame(animate2Id);
-    tip = 0;
-  }
-}
-
-/** 创建粒子纹理 **/
-function makeStarTexture2() {
-  var canvas = document.createElement('canvas');
-  canvas.width = 16;
-  canvas.height = 16;
-  var pen = canvas.getContext('2d');
-  pen.fillStyle = '#ccccff'; //将笔触填充色设置为这个渐变放射状
-  pen.beginPath();
-  pen.arc(8, 8, 8, 0, 2 * Math.PI);
-  pen.fill();
-  return canvas;
 }
