@@ -60,7 +60,6 @@ function showA() {
 }
 function showB() {
   $('#page-b').addClass('show');
-  videoPlay();
 }
 function showC() {
   $('#page-c').addClass('show');
@@ -114,9 +113,9 @@ function createMoonWords() {
 }
 // 初始化
 function init() {
-  $('body').one('touchstart', toggleSound);
+  $('body').one('touchstart click', toggleSound);
   // 绑定music控制
-  $('#music').on('touchend', toggleMusic);
+  $('#music').on('click', toggleMusic);
   // 绑定video控制
   $('#video-mark').on('click', toggleVideo);
   // 点击生成祝福，跳转下一页
@@ -173,7 +172,7 @@ function init() {
 function initStars() {
   var files = [s1, s2];
 
-  for (var i = 0; i < 160; i++) {
+  for (var i = 0; i < 600; i++) {
     var ran = Math.floor(Math.random() * 2);
     var width;
     var route = 0;
@@ -191,7 +190,7 @@ function initStars() {
     stars.push({
       dom: files[ran],
       width: width * dpi,
-      flash: random(0, 2) > 0.8, // 是否闪烁
+      flash: true, // 是否闪烁
       opacity: opacity,
       route: route, // 旋转角度
       x: random(-20, canvas1.width + 20),

@@ -276,15 +276,15 @@ a {
   transform: translateX(20px);
 }
 .page-a.show .ul-box > li:first-child {
-  transition: all 1000ms;
+  transition: all 1600ms;
   transition-delay: 800ms;
   opacity: 1;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
 .page-a.show .ul-box > li:nth-child(2) {
-  transition: all 1000ms;
-  transition-delay: 1100ms;
+  transition: all 1600ms;
+  transition-delay: 1200ms;
   opacity: 1;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
@@ -341,14 +341,8 @@ a {
   color: rgba(200, 200, 200, 0.8);
   margin-top: 10px;
 }
-.page-b.show .d-2 > div:nth-child(2) {
-  transition-delay: 400ms;
-}
-.page-b.show .d-2 > div:nth-child(3) {
+.page-b.show .d-2 > div:nth-child(n + 3) {
   transition-delay: 800ms;
-}
-.page-b.show .d-2 > div:nth-child(4) {
-  transition-delay: 1200ms;
 }
 .page-b .d-3 {
   padding: 20px 0;
@@ -465,7 +459,7 @@ a {
   height: 100vh;
 }
 .page-c.show ul > li {
-  transition: all 1500ms;
+  transition: all 2000ms;
   opacity: 1 !important;
   -webkit-transform:scale(1,1) !important;
   transform: scale(1,1) !important;
@@ -488,33 +482,29 @@ a {
   transform: scale(1.4,1.4);;
 }
 
-
-.page-c.show .li2 {
-  transition-delay: 300ms;
-}
 .page-c.show .li3 {
   transition-delay: 600ms;
 }
 .page-c.show .li4 {
-  transition-delay: 900ms;
+  transition-delay: 600ms;
 }
 .page-c.show .li5 {
   transition-delay: 1200ms;
 }
 .page-c.show .li6 {
-  transition-delay: 1500ms;
+  transition-delay: 1200ms;
 }
 .page-c.show .li7 {
   transition-delay: 1800ms;
 }
 .page-c.show .li8 {
-  transition-delay: 2100ms;
+  transition-delay: 1800ms;
 }
 .page-c.show .li9 {
-  transition-delay: 2300ms;
+  transition-delay: 2400ms;
 }
 .page-c.show .li10 {
-  transition-delay: 2600ms;
+  transition-delay: 2400ms;
 }
 /** ============ page-d ============ **/
 .page-d {
@@ -593,48 +583,48 @@ a {
   transform: translateX(-30px);
 }
 .page-d.show .ul1 > li {
-  transition: all 2500ms;
+  transition: all 2000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .page-d.show .ul1 > li > span:first-of-type {
-  transition: all 1300ms;
+  transition: all 1200ms;
   transition-delay: 800ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-d.show .ul1 > li > span:nth-of-type(2) {
-  transition: all 1300ms;
+  transition: all 1200ms;
   transition-delay: 1600ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-d.show .ul2 > li:first-child {
-  transition: all 2200ms;
-  transition-delay: 2200ms;
+  transition: all 2000ms;
+  transition-delay: 2000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .page-d.show .ul2 > li:nth-child(2) {
   transition: all 1800ms;
-  transition-delay: 3800ms;
+  transition-delay: 4200ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .page-d.show .ul2 > li > span:first-of-type {
-  transition: all 1300ms;
+  transition: all 1200ms;
   transition-delay: 3000ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-d.show .ul2 > li > span:nth-of-type(2) {
-  transition: all 1300ms;
+  transition: all 1200ms;
   transition-delay: 3800ms;
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -695,65 +685,62 @@ a {
   -webkit-transform: translateX(-20px);
   transform: translateX(-20px);
 }
-.page-e.show .ul-box > li:nth-child(2) {
-  transition-delay: 400ms;
-}
+
 .page-e.show .ul-box > li:nth-child(3) {
-  transition-delay: 800ms;
+  transition-delay: 600ms;
 }
 
 .page-e.show .ul-box > li:nth-child(4) {
-  transition-delay: 1200ms;
+  transition-delay: 600ms;
 }
 .page-e.show .ul-box > li:nth-child(5) {
-  transition-delay: 1600ms;
+  transition-delay: 1200ms;
 }
 .page-e.show .ul-box > li:nth-child(6) {
-  transition-delay: 2000ms;
+  transition-delay: 1800ms;
 }
 .page-e.show .ul-box > li:nth-child(7) {
-  transition-delay: 2400ms;
+  transition-delay: 1800ms;
 }
 
 .page-e.show .ul-box > li .anime_3 {
   transition: all 2000ms;
-  transition-delay: 600ms;
   -webkit-transform: translateY(-108px);
   transform: translateY(-108px); /** 36*4 **/
 }
 .page-e.show .ul-box > li .anime_7 {
   transition: all 2000ms;
-  transition-delay: 1400ms;
+  transition-delay: 800ms;
   -webkit-transform: translateY(-252px);
   transform: translateY(-252px);
 }
 .page-e.show .ul-box > li .anime_78 {
   transition: all 2000ms;
-  transition-delay: 1400ms;
+  transition-delay: 800ms;
   -webkit-transform: translateY(-2808px);
   transform: translateY(-2808px);
 }
 .page-e.show .ul-box > li .anime_5 {
   transition: all 2000ms;
-  transition-delay: 1800ms;
+  transition-delay: 1000ms;
   -webkit-transform: translateY(-180px);
   transform: translateY(-180px);
 }
 .page-e.show .ul-box > li .anime_50 {
   transition: all 2000ms;
-  transition-delay: 1800ms;
+  transition-delay: 1000ms;
   -webkit-transform: translateY(-1800px);
   transform: translateY(-1800px);
 }
 .page-e.show .ul-box > li .anime_7_two {
   transition: all 2000ms;
-  transition-delay: 2200ms;
+  transition-delay: 1700ms;
   -webkit-transform: translateY(-252px);
   transform: translateY(-252px);
 }
 .page-e.show .ul-box > li {
   transition-property: all;
-  transition-duration: 1400ms;
+  transition-duration: 1800ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -936,6 +923,26 @@ a {
 }
 
 /** music **/
+@-webkit-keyframes routeAnimate{
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes routeAnimate{
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
 .music {
   position: fixed;
   top: 20px;
@@ -949,6 +956,14 @@ a {
 }
 .music.playing {
   background-image: url(assets/music-on.png);
+  -webkit-animation-name: routeAnimate;
+  animation-name: routeAnimate;
+  -webkit-animation-duration: 3000ms;
+  animation-duration: 3000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /** 通用月亮 **/
@@ -1120,15 +1135,21 @@ a {
 
 .canvas2{
   position: absolute;
-  top:0;
+  bottom:0;
   left:0;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   z-index:1;
-  opacity: 0.4;
+  overflow: hidden;
+  opacity: 1;
 }
-.canvas2 .canvas2-1{
-  display: none;
+.canvas2 canvas{
+  position: absolute;
+  top:0;
+  left:50%;
+  width: 150vw;
+  height: 70vh;
+  transform: translateX(-50%);
 }
 @media screen and (orientation: landscape) {
   /*竖屏 css*/
