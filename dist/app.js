@@ -13,9 +13,7 @@ var swBack = document.getElementById('sw-back');
 var stars = []; // 所有的星星
 var s1 = document.getElementById('s1');
 var s2 = document.getElementById('s2');
-var s3 = document.getElementById('s3');
-var s3show = false;
-var star3 = [];
+
 window.onload = function() {
   swiper1 = new Swiper('#swiper', {
     direction: 'vertical', // 方向
@@ -62,6 +60,7 @@ function showA() {
 }
 function showB() {
   $('#page-b').addClass('show');
+  videoPlay();
 }
 function showC() {
   $('#page-c').addClass('show');
@@ -200,11 +199,6 @@ function initStars() {
     });
   }
 
-  for(var k=0;k<12;k++){
-    star3.push({
-      
-    })
-  }
   animate();
 }
 
@@ -230,12 +224,6 @@ function drow() {
       } else if (rand < 0.5 && t.opacity < 1) {
         t.opacity += 0.1;
       }
-    }
-  }
-  // 流星
-  if(s3show){
-    for(var k = 0;k<star3.length;k++){
-
     }
   }
 }
@@ -297,7 +285,7 @@ function toggleSound() {
 /** 视频控制 **/
 function videoPlay() {
   video1.play();
-  pause(); // 音乐暂停
+  // pause(); // 音乐暂停
   $('#video-mark').addClass('hide');
   videoPlaying = 1;
 }
