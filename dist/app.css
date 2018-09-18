@@ -219,14 +219,14 @@ a {
   z-index: 20;
 }
 .page-a.show .t1 {
-  transition: all 2000ms;
+  transition: all 3000ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-a .t2 {
   position: absolute;
-  bottom: -2%;
+  bottom: 2%;
   left: 5%;
   width: 55vw;
   max-width: 240px;
@@ -237,9 +237,9 @@ a {
 }
 
 .page-a.show .t2 {
-  transition: opacity 800ms, -webkit-transform 4000ms;
-  transition: opacity 800ms, transform 4000ms;
-  transition: opacity 800ms, transform 4000ms, -webkit-transform 4000ms;
+  transition: opacity 1000ms, -webkit-transform 4000ms;
+  transition: opacity 1000ms, transform 4000ms;
+  transition: opacity 1000ms, transform 4000ms, -webkit-transform 4000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -276,15 +276,15 @@ a {
   transform: translateX(20px);
 }
 .page-a.show .ul-box > li:first-child {
-  transition: all 1600ms;
-  transition-delay: 800ms;
+  transition: all 2600ms;
+  transition-delay: 1800ms;
   opacity: 1;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
 .page-a.show .ul-box > li:nth-child(2) {
-  transition: all 1600ms;
-  transition-delay: 1200ms;
+  transition: all 2600ms;
+  transition-delay: 2200ms;
   opacity: 1;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
@@ -342,7 +342,7 @@ a {
   margin-top: 10px;
 }
 .page-b.show .d-2 > div:nth-child(n + 3) {
-  transition-delay: 800ms;
+  transition-delay: 1200ms;
 }
 .page-b .d-3 {
   padding: 20px 0;
@@ -360,10 +360,10 @@ a {
   transition-timing-function: linear;
 }
 .page-b.show .d-3 > img:first-child {
-  transition-delay: 500ms;
+  transition-delay: 1500ms;
 }
 .page-b.show .d-3 > img:nth-child(2) {
-  transition-delay: 1000ms;
+  transition-delay: 2400ms;
 }
 .page-b .d-3 > img:first-child {
   margin-right: -8px;
@@ -421,28 +421,28 @@ a {
   opacity: 1;
 }
 .page-b.show .d-1 {
-  transition: all 1000ms;
+  transition: all 2000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .page-b.show .d-2 > div {
   transition-property: all;
-  transition-duration: 1500ms;
+  transition-duration: 2500ms;
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 }
 .page-b.show .d-3 > img {
   transition-property: all;
-  transition-duration: 2200ms;
+  transition-duration: 2500ms;
   -webkit-transform: rotate(0) scale(1, 1) translateX(0) translateY(0);
   transform: rotate(0) scale(1, 1) translateX(0) translateY(0);
   opacity: 1;
 }
 .page-b.show .d-4 {
-  transition: all 2400ms;
-  transition-delay: 1500ms;
+  transition: all 3000ms;
+  transition-delay: 3000ms;
   opacity: 1;
   -webkit-transform: translateY(0) scale(1, 1);
   transform: translateY(0) scale(1, 1);
@@ -459,10 +459,10 @@ a {
   height: 100vh;
 }
 .page-c.show ul > li {
-  transition: all 2000ms;
+  transition: all 3000ms;
   opacity: 1 !important;
-  -webkit-transform:scale(1,1) !important;
-  transform: scale(1,1) !important;
+  -webkit-transform:translateX(0) !important;
+  transform: translateX(0) !important;
 }
 .page-c > ul {
   font-size: 18px;
@@ -478,33 +478,33 @@ a {
 }
 .page-c > ul > li {
   opacity: 0;
-  -webkit-transform:  scale(1.4,1.4);
-  transform: scale(1.4,1.4);;
+  -webkit-transform:  translateX(-20px);
+  transform:  translateX(-20px);
 }
 
 .page-c.show .li3 {
-  transition-delay: 600ms;
+  transition-delay: 1600ms;
 }
 .page-c.show .li4 {
-  transition-delay: 600ms;
+  transition-delay: 1600ms;
 }
 .page-c.show .li5 {
-  transition-delay: 1200ms;
+  transition-delay: 3200ms;
 }
 .page-c.show .li6 {
-  transition-delay: 1200ms;
+  transition-delay: 3200ms;
 }
 .page-c.show .li7 {
-  transition-delay: 1800ms;
+  transition-delay: 4800ms;
 }
 .page-c.show .li8 {
-  transition-delay: 1800ms;
+  transition-delay: 4800ms;
 }
 .page-c.show .li9 {
-  transition-delay: 2400ms;
+  transition-delay: 6400ms;
 }
 .page-c.show .li10 {
-  transition-delay: 2400ms;
+  transition-delay: 6400ms;
 }
 /** ============ page-d ============ **/
 .page-d {
@@ -542,7 +542,7 @@ a {
   justify-content: center;
 }
 .page-d .pic-box > img {
-  width: 50%;
+  width: 58%;
   height: auto;
   border-radius: 3px;
 }
@@ -558,77 +558,64 @@ a {
   z-index: 2;
 }
 .page-d.show .pic-box > img:first-child {
-  transition: all 1200ms;
-  transition-delay: 1200ms;
+  transition: all 3000ms;
+  transition-delay: 3000ms;
   -webkit-transform: translateX(30px) rotate(0) translateY(-25px);
   transform: translateX(30px) rotate(0) translateY(-25px);
   opacity: 1;
 }
 .page-d.show .pic-box > img:nth-child(2) {
-  transition: all 1200ms;
-  transition-delay: 1600ms;
+  transition: all 3000ms;
+  transition-delay: 4000ms;
   -webkit-transform: translateX(-30px) rotate(0) translateY(30px);
   transform: translateX(-30px) rotate(0) translateY(30px);
   opacity: 1;
 }
 .page-d ul > li {
   opacity: 0;
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
 }
 .page-d ul > li > span {
   display: inline-block;
   opacity: 0;
-  -webkit-transform: translateX(-30px);
-  transform: translateX(-30px);
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
 }
 .page-d.show .ul1 > li {
-  transition: all 2000ms;
+  transition: all 3000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .page-d.show .ul1 > li > span:first-of-type {
-  transition: all 1200ms;
-  transition-delay: 800ms;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-.page-d.show .ul1 > li > span:nth-of-type(2) {
-  transition: all 1200ms;
-  transition-delay: 1600ms;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-.page-d.show .ul2 > li:first-child {
-  transition: all 2000ms;
+  transition: all 3000ms;
   transition-delay: 2000ms;
   opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.page-d.show .ul2 > li:first-child {
+  transition: all 3000ms;
+  transition-delay: 5000ms;
+  opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+.page-d.show .ul2 > li > span {
+  transition: all 3000ms;
+  transition-delay: 7000ms;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
 .page-d.show .ul2 > li:nth-child(2) {
-  transition: all 1800ms;
-  transition-delay: 4200ms;
+  transition: all 3000ms;
+  transition-delay: 9000ms;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-}
-.page-d.show .ul2 > li > span:first-of-type {
-  transition: all 1200ms;
-  transition-delay: 3000ms;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-.page-d.show .ul2 > li > span:nth-of-type(2) {
-  transition: all 1200ms;
-  transition-delay: 3800ms;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
 }
 /** ========== page-e =========== **/
 .page-e {
@@ -687,60 +674,60 @@ a {
 }
 
 .page-e.show .ul-box > li:nth-child(3) {
-  transition-delay: 600ms;
+  transition-delay: 1200ms;
 }
 
 .page-e.show .ul-box > li:nth-child(4) {
-  transition-delay: 600ms;
-}
-.page-e.show .ul-box > li:nth-child(5) {
   transition-delay: 1200ms;
 }
+.page-e.show .ul-box > li:nth-child(5) {
+  transition-delay: 2400ms;
+}
 .page-e.show .ul-box > li:nth-child(6) {
-  transition-delay: 1800ms;
+  transition-delay: 3600ms;
 }
 .page-e.show .ul-box > li:nth-child(7) {
-  transition-delay: 1800ms;
+  transition-delay: 3600ms;
 }
 
 .page-e.show .ul-box > li .anime_3 {
-  transition: all 2000ms;
+  transition: all 3000ms;
   -webkit-transform: translateY(-108px);
   transform: translateY(-108px); /** 36*4 **/
 }
 .page-e.show .ul-box > li .anime_7 {
-  transition: all 2000ms;
-  transition-delay: 800ms;
+  transition: all 3000ms;
+  transition-delay: 1200ms;
   -webkit-transform: translateY(-252px);
   transform: translateY(-252px);
 }
 .page-e.show .ul-box > li .anime_78 {
-  transition: all 2000ms;
-  transition-delay: 800ms;
+  transition: all 3000ms;
+  transition-delay: 1200ms;
   -webkit-transform: translateY(-2808px);
   transform: translateY(-2808px);
 }
 .page-e.show .ul-box > li .anime_5 {
-  transition: all 2000ms;
-  transition-delay: 1000ms;
+  transition: all 3000ms;
+  transition-delay: 2400ms;
   -webkit-transform: translateY(-180px);
   transform: translateY(-180px);
 }
 .page-e.show .ul-box > li .anime_50 {
-  transition: all 2000ms;
-  transition-delay: 1000ms;
+  transition: all 3000ms;
+  transition-delay: 2400ms;
   -webkit-transform: translateY(-1800px);
   transform: translateY(-1800px);
 }
 .page-e.show .ul-box > li .anime_7_two {
-  transition: all 2000ms;
-  transition-delay: 1700ms;
+  transition: all 3000ms;
+  transition-delay: 3600ms;
   -webkit-transform: translateY(-252px);
   transform: translateY(-252px);
 }
 .page-e.show .ul-box > li {
   transition-property: all;
-  transition-duration: 1800ms;
+  transition-duration: 3600ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -804,16 +791,16 @@ a {
   transform: translateX(20px);
 }
 .page-f.show .ul-box>li {
-  transition: all 1200ms;
+  transition: all 2200ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-f.show .ul-box>li:nth-child(2) {
-  transition-delay: 400ms;
+  transition-delay: 1200ms;
 }
 .page-f.show .ul-box>li:nth-child(3) {
-  transition-delay: 800ms;
+  transition-delay: 2400ms;
 }
 .page-f .moon {
   -webkit-transform: scale(0.4, 0.4);
@@ -821,8 +808,8 @@ a {
   opacity: 0;
 }
 .page-f.show .moon {
-  transition: all 1200ms;
-  transition-delay: 600ms;
+  transition: all 3000ms;
+  transition-delay: 2600ms;
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   opacity: 1;
@@ -832,8 +819,8 @@ a {
   width: 0;
 }
 .page-f.show .light-btn {
-  transition: all 1000ms;
-  transition-delay: 1300ms;
+  transition: all 3000ms;
+  transition-delay: 4000ms;
   opacity: 1;
   width: 200px;
 }
@@ -876,19 +863,19 @@ a {
   transform: translateX(20px);
 }
 .page-g.show .ul-box>li {
-  transition: all 1200ms;
+  transition: all 2200ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .page-g.show .ul-box>li:nth-child(2) {
-  transition-delay: 400ms;
+  transition-delay: 1200ms;
 }
 .page-g.show .ul-box>li:nth-child(3) {
-  transition-delay: 800ms;
+  transition-delay: 2400ms;
 }
 .page-g.show .ul-box>li:nth-child(4) {
-  transition-delay: 1200ms;
+  transition-delay: 3600ms;
 }
 .page-g .moon {
   -webkit-transform: scale(0.4, 0.4);
@@ -896,8 +883,8 @@ a {
   opacity: 0;
 }
 .page-g.show .moon {
-  transition: all 1200ms;
-  transition-delay: 800ms;
+  transition: all 3000ms;
+  transition-delay: 3400ms;
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   opacity: 1;
@@ -907,8 +894,8 @@ a {
   width: 0;
 }
 .page-g.show .light-btn {
-  transition: all 1000ms;
-  transition-delay: 1800ms;
+  transition: all 3000ms;
+  transition-delay: 4800ms;
   opacity: 1;
   width: 200px;
 }
@@ -1138,7 +1125,7 @@ a {
   bottom:0;
   left:0;
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   z-index:1;
   overflow: hidden;
   opacity: 1;
@@ -1148,7 +1135,7 @@ a {
   top:0;
   left:50%;
   width: 150vw;
-  height: 70vh;
+  height: 100vh;
   transform: translateX(-50%);
 }
 @media screen and (orientation: landscape) {
