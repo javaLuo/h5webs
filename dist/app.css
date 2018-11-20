@@ -461,7 +461,7 @@ a {
 .page-c.show ul > li {
   transition: all 3000ms;
   opacity: 1 !important;
-  -webkit-transform:translateX(0) !important;
+  -webkit-transform: translateX(0) !important;
   transform: translateX(0) !important;
 }
 .page-c > ul {
@@ -478,8 +478,8 @@ a {
 }
 .page-c > ul > li {
   opacity: 0;
-  -webkit-transform:  translateX(-20px);
-  transform:  translateX(-20px);
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
 }
 
 .page-c.show .li3 {
@@ -780,26 +780,26 @@ a {
   z-index: 2;
   letter-spacing: 1px;
 }
-.page-f .ul-box>li:nth-child(even){
+.page-f .ul-box > li:nth-child(even) {
   opacity: 0;
   -webkit-transform: translateX(-20px);
   transform: translateX(-20px);
 }
-.page-f .ul-box>li:nth-child(odd){
+.page-f .ul-box > li:nth-child(odd) {
   opacity: 0;
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
 }
-.page-f.show .ul-box>li {
+.page-f.show .ul-box > li {
   transition: all 2200ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
-.page-f.show .ul-box>li:nth-child(2) {
+.page-f.show .ul-box > li:nth-child(2) {
   transition-delay: 1200ms;
 }
-.page-f.show .ul-box>li:nth-child(3) {
+.page-f.show .ul-box > li:nth-child(3) {
   transition-delay: 2400ms;
 }
 .page-f .moon {
@@ -819,7 +819,7 @@ a {
   width: 0;
 }
 .page-f.show .light-btn {
-  transition: all 3000ms;
+  transition: all 1800ms;
   transition-delay: 4000ms;
   opacity: 1;
   width: 200px;
@@ -852,29 +852,29 @@ a {
   z-index: 2;
   letter-spacing: 1px;
 }
-.page-g .ul-box>li:nth-child(even){
+.page-g .ul-box > li:nth-child(even) {
   opacity: 0;
   -webkit-transform: translateX(-20px);
   transform: translateX(-20px);
 }
-.page-g .ul-box>li:nth-child(odd){
+.page-g .ul-box > li:nth-child(odd) {
   opacity: 0;
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
 }
-.page-g.show .ul-box>li {
+.page-g.show .ul-box > li {
   transition: all 2200ms;
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
-.page-g.show .ul-box>li:nth-child(2) {
+.page-g.show .ul-box > li:nth-child(2) {
   transition-delay: 1200ms;
 }
-.page-g.show .ul-box>li:nth-child(3) {
+.page-g.show .ul-box > li:nth-child(3) {
   transition-delay: 2400ms;
 }
-.page-g.show .ul-box>li:nth-child(4) {
+.page-g.show .ul-box > li:nth-child(4) {
   transition-delay: 3600ms;
 }
 .page-g .moon {
@@ -894,7 +894,7 @@ a {
   width: 0;
 }
 .page-g.show .light-btn {
-  transition: all 3000ms;
+  transition: all 1800ms;
   transition-delay: 4800ms;
   opacity: 1;
   width: 200px;
@@ -910,7 +910,7 @@ a {
 }
 
 /** music **/
-@-webkit-keyframes routeAnimate{
+@-webkit-keyframes routeAnimate {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -920,7 +920,7 @@ a {
     transform: rotate(360deg);
   }
 }
-@keyframes routeAnimate{
+@keyframes routeAnimate {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -1092,7 +1092,6 @@ a {
   width: 100%;
   height: 100%;
   background-color: transparent;
-
 }
 .star-hide {
   display: none;
@@ -1120,20 +1119,20 @@ a {
   z-index: -1;
 }
 
-.canvas2{
+.canvas2 {
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  z-index:1;
+  z-index: 1;
   overflow: hidden;
   opacity: 1;
 }
-.canvas2 canvas{
+.canvas2 canvas {
   position: absolute;
-  top:0;
-  left:50%;
+  top: 0;
+  left: 50%;
   width: 150vw;
   height: 100vh;
   transform: translateX(-50%);
